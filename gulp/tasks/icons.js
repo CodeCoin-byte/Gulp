@@ -13,18 +13,6 @@ export const icons = () => {
     .pipe(
       app.plugins.if(
         app.isBuild,
-        webp()
-      )
-    )
-    .pipe(
-      app.plugins.if(
-        app.isBuild,
-        app.gulp.dest(app.path.build.icons)
-      )
-    )
-    .pipe(
-      app.plugins.if(
-        app.isBuild,
         app.gulp.src(app.path.src.icons)
       )
     )

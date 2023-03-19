@@ -5,17 +5,20 @@
   "main": "gulpfile.js",
   "type": "module",
   "scripts": {
+    "fonts": "gulp fonts",
+    "sprite": "gulp svgSprite",
     "dev": "gulp",
-    "build": "gulp build --build",
-    "zip": "gulp deployZip --build",
-    "svgSprite": "gulp svgSprite"
+    "build": "gulp build --build"
   },
   "keywords": [],
   "author": "CodeCoin-byte",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.27.11",
+    "browser-sync": "^2.29.0",
     "del": "^7.0.0",
+    "eslint": "^8.36.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
@@ -29,12 +32,12 @@
     "gulp-rename": "^2.0.0",
     "gulp-replace": "^1.1.4",
     "gulp-sass": "^5.1.0",
-    "gulp-svg-sprite": "^2.0.1",
+    "gulp-svg-sprite": "^2.0.2",
     "gulp-ttf2woff2": "^4.0.1",
     "gulp-version-number": "^0.2.4",
     "gulp-webp": "^4.0.1",
     "normalize.css": "^8.0.1",
-    "sass": "^1.58.1",
+    "sass": "^1.59.3",
     "vinyl-named": "^1.1.0",
     "webpack-stream": "^7.0.0"
   }

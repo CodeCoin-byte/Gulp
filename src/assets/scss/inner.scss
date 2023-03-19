@@ -1,0 +1,11 @@
+@import 'normalize.css/normalize';
+@import './pages/variablse';
+@import './pages/fonts';
+
+h1  {
+  color: $secondary-color;
+}
+
+h2 {
+  color: $orange-color;
+}

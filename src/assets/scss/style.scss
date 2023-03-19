@@ -1,0 +1,10 @@
+@import 'normalize.css/normalize';
+@import './pages/variablse';
+@import './pages/fonts';
+
+h1 {
+  color: $primary-color;
+}
+h2 {
+  color: $blue-color;
+}

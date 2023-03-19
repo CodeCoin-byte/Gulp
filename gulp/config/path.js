@@ -1,13 +1,14 @@
-import  * as nodePath from 'path';
+import * as nodePath from 'path';
+
 const rootFolder = nodePath.basename(nodePath.resolve());
 
 const buildFolder = './dist';
 const srcFolder = './src';
 
-export const path = {
+export default {
   build: {
     js: `${buildFolder}/assets/js`,
-    images: `${buildFolder}/assets/img`,
+    images: `${buildFolder}/assets/images`,
     icons: `${buildFolder}/assets/icons`,
     css: `${buildFolder}/assets/css`,
     html: `${buildFolder}/`,
@@ -16,9 +17,9 @@ export const path = {
   },
   src: {
     js: `${srcFolder}/assets/js/*.js`,
-    images: `${srcFolder}/assets/img/**/*.{jpg,jpeg,png,gif,webp}`,
+    images: `${srcFolder}/assets/images/**/*.{jpg,jpeg,png,gif,webp}`,
     icons: `${srcFolder}/assets/icons/*.{svg,png,gif}`,
-    scss: `${srcFolder}/assets/scss/style.scss`,
+    scss: `${srcFolder}/assets/scss/*.scss`,
     html: `${srcFolder}/*.html`,
     files: `${srcFolder}/assets/files/**/*.*`,
     svgicons: `${srcFolder}/assets/icons/*.svg`,
@@ -26,13 +27,14 @@ export const path = {
   },
   watch: {
     js: `${srcFolder}/assets/js/**/*.js`,
-    images: `${srcFolder}/assets/**/*.{jpg,jpeg,png,gif,webp,svg}`,
+    images: `${srcFolder}/assets/images/**/*.{jpg,jpeg,png,gif,webp}`,
+    icons: `${srcFolder}/assets/icons/**/*.{png,svg,gif}`,
     scss: `${srcFolder}/assets/scss/**/*.scss`,
     html: `${srcFolder}/**/*.html`,
     files: `${srcFolder}/assets/files/**/*.*`,
   },
   clean: buildFolder,
-  buildFolder: buildFolder,
-  srcFolder: srcFolder,
-  rootFolder: rootFolder
-}
+  buildFolder,
+  srcFolder,
+  rootFolder,
+};
